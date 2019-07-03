@@ -3,12 +3,12 @@ import { Color } from "src/interface/color.interface";
 
 @Injectable()
 export class ColorService {
-    private colors: Color[]
+    public colors: Color[] = []
     findAll(): Color[] {
-        return this.colors
+         return this.colors
     }
     findOne(id: number) {
-        return this.colors.filter(item => item.id === id);
+        return this.colors.filter(item => item.id == id);
     }
     create(color: Color) {
         this.colors.push(color)
